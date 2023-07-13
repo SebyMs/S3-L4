@@ -20,7 +20,6 @@ const creaTabelline = function () {
     tabelle.setAttribute("id", i);
     container.appendChild(tabelle);
     let divTabelle = document.getElementById(i);
-    console.log(divTabelle);
     z += 1;
     x = 0;
     while (x !== 15) {
@@ -28,7 +27,8 @@ const creaTabelline = function () {
       const tabelline = document.createElement("div");
       tabelline.innerHTML = ``;
       tabelline.setAttribute("class", "tabelline");
-
+      stringa = "num" + randNum;
+      tabelline.setAttribute("id", stringa);
       if (randNum <= 76 && randNum !== 0) {
         tabelline.innerHTML = `${randNum}`;
         divTabelle.appendChild(tabelline);
@@ -42,15 +42,21 @@ const creaTabelline = function () {
 array = [0];
 const randNum = function () {
   let x = 0;
+  let stringa = "";
+  let randNumber = 0;
   while (x !== 1) {
-    const randNumber = Math.floor(Math.random() * 100);
+    randNumber = Math.floor(Math.random() * 100);
     if (randNumber <= 76 && randNumber !== 0) {
       array.push(randNumber);
       x = 1;
     }
   }
+  stringa = "num" + randNumber;
+  console.log(stringa);
   let casella = 0;
   const div = document.querySelectorAll(".board-tabelle div");
+  const tabelline = document.getElementById(stringa);
+  console.log(tabelline);
   for (let i = 0; i < div.length; i++) {
     if (parseInt(div[i].innerHTML) === array[array.length - 1]) {
       casella = array[array.length - 1];
@@ -58,6 +64,4 @@ const randNum = function () {
     }
   }
 };
-// cambiare sistema di assegnazione a tabelle grandi
-// dare id al
-// aggiungere selezione tabbelline
+// sistema di controllo se il numero é presente nelle tebbelline
