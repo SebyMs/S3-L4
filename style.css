@@ -1,0 +1,40 @@
+main {
+  box-sizing: border-box;
+}
+.container {
+  text-align: center;
+  width: 700px;
+
+  margin-inline: auto;
+}
+.cell {
+  display: inline-block;
+  border: 1px solid black;
+  width: 38px;
+  height: 38px;
+  padding-top: 15px;
+}
+
+button,
+input {
+  display: block;
+  text-align: center;
+  margin-inline: auto;
+  margin-top: 10px;
+}
+.tabelline {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px;
+  width: 35px;
+}
+.tabelline-grandi {
+  margin-inline: auto;
+  margin-top: 20px;
+  width: 250px;
+  display: inline-block;
+}
+/* .tabelline,
+.cell {
+  background-color: yellow;
+} */
